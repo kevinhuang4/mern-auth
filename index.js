@@ -16,9 +16,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: "http://localhost:3000"
-}));
+// app.use(cors({
+//     origin: "http://localhost:3000"
+// }));
+
+app.use(cors())
 
 // DB config
 const db = require("./config/keys").mongoURI;
